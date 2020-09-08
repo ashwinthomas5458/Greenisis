@@ -1,0 +1,229 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    height: auto;
+    background-color: #01475800;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    position: fixed;
+    transition: 1s;
+
+}
+.logo{
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.8rem;
+    display: flex;
+}
+#logo{
+    display: none;
+    width: 100%;
+    height: auto;
+}
+.navlist{
+    width: auto;
+    height: 2rem;
+    margin-right: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Polly';
+    font-size: 1rem;
+    font-weight: 800;
+    margin-left: 0.8rem;
+}
+.cover{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #08332077,#053a4767), url("cover.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainbody{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Polly';
+}
+.about{
+    width: 100%;
+    height: auto;
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.title{
+    color: #46c68f;
+    font-weight: 800;
+    font-size: 3rem;
+}
+.content{
+    color: #555;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    text-align: justify;
+    margin-bottom: 10rem;
+}
+.gallery{
+    width: 100%;
+    height: 40rem;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.g1{
+    width: 49%;
+    height: 38rem;
+    overflow: hidden;
+    display: flex;
+}
+.gcol{
+    width: 49%;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.g2{
+    width: 100%;
+    height: 46%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.images{
+    width: auto;
+    height: 100%;
+}
+#banner{
+    width: 70%;
+    height: auto;
+}
+.products{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eeeeee;
+    padding-bottom: 6rem;
+    padding-top: 4rem;
+}
+.prow{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.card{
+    width: 30%;
+    height: 20rem;
+    background-color: #ffffff;
+    margin-top: 4rem;
+    color: #18b2aa; ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.cardicon{
+    width: 4rem;
+    height: auto;
+}
+.card:hover{
+    background-color: #001a2059;
+    color: #ffffff;
+}
+.feedback{
+    width: 100%;
+    height: 40rem;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.textbox{
+    width: 60%;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+.textcomment{
+    width: 60%;
+    padding-bottom: 5rem;
+    margin-bottom: 1rem;
+}
+.textbox:hover{
+    border-color: #18b2aa;
+}
+.textcomment:hover{
+    border-color: #18b2aa;
+}
+.submit{
+    width: 12rem;
+    height: 2.4rem;
+    border: none;
+    background-color: #067e7a;   
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 502;
+    letter-spacing: 0.6rem;
+    font-family: 'Polly';
+    margin-bottom: 2rem;
+}
+.submit:hover{
+    background-color: #18b2aa;
+}
+.contactinfo{
+    width: 100%;
+    height: 30rem;
+    background-color: #eeeeee;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    width: 100%;
+    height: 1rem;
+    background-color: #014758;
+    color: #067e7a;
+    font-size: 1rem;
+    letter-spacing: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.8rem;
+    padding-top: 0.8rem;
+}
+.ftr{
+    font-family: 'Polly';
+    
+}
+.contact{
+    text-align: justify;
+    color: #555;
+}
+.namec{
+    margin: 0;
+    color: #555;
+}
