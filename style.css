@@ -8,7 +8,7 @@ body{
 header{
     width: 100%;
     height: auto;
-    background-color: #01475800;
+    background-color: #09191d00;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,7 +22,7 @@ header{
 .logo{
     width: 2rem;
     height: 2rem;
-    margin-left: 0.8rem;
+    margin-left: 2rem;
     display: flex;
 }
 #logo{
@@ -39,7 +39,7 @@ header{
 .navlist{
     width: auto;
     height: 2rem;
-    margin-right: 0.8rem;
+    margin-right: 2rem;
     display: flex;
     align-items: center;
 }
@@ -54,7 +54,7 @@ a{
 .cover{
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(to bottom, #08332077,#053a4767), url("cover.jpg");
+    background-image: linear-gradient(to bottom, #00000094,#00000079), url("https://images.wallpaperscraft.com/image/greenhouse_plants_green_147397_1920x1080.jpg");
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -78,8 +78,8 @@ a{
     align-items: center;
 }
 .title{
-    color: #46c68f;
-    font-weight: 800;
+    color: #1ce08b;
+    font-weight: 900;
     font-size: 3rem;
 }
 .content{
@@ -131,7 +131,9 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #eeeeee;
+    background-image:linear-gradient(to bottom, #000000bd, #0000009f), url("https://data.whicdn.com/images/315684928/original.jpg");
+    background-size: cover;
+    background-position: center;
     padding-bottom: 6rem;
     padding-top: 4rem;
 }
@@ -158,21 +160,21 @@ a{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .back{
     width: 100%;
     height: 100%;
-    background-color: #014758;
+    background-color: #50685096;
     color: #18b2aa; 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
+    align-items: center;    
     text-align: justify;
-    opacity: 0;
+
     transition: 0.6s ease;
 }
 .back h4{
@@ -181,8 +183,8 @@ a{
 .back p{
     margin: 1rem;
 }
-.back:hover{
-    opacity: 1;
+.front:hover{
+    opacity: 0;
 }
 .cardicon{
     width: 4rem;
@@ -244,8 +246,8 @@ a{
 footer{
     width: 100%;
     height: 1rem;
-    background-color: #014758;
-    color: #067e7a;
+    background-color: #09191d;
+    color: #333333;
     font-size: 1rem;
     letter-spacing: 0.8rem;
     display: flex;
@@ -289,24 +291,36 @@ footer{
 .mob{
     display: none;
     width: 100%;
-    height: auto;
+    height: 40rem;
     overflow: hidden;
 }
 .mobimgcontainer{
     width: 90%;
-    height: auto;
+    height: 28rem;
     overflow: hidden;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    
+    
+}
+.sbtn{
+    width: auto;
+    height: auto;
+    background-color: #ffffff3f;
+    border: none;
+}
+.sicon{
+    width: auto;
+    height: 1rem;
+    cursor: pointer;
     
 }
 @media screen and (max-width:700px){
     .navlist{
         position: absolute;
         right: 0;
-        top: 3.6rem;
-        height: 94vh;
+        top: 0;
+        height: 100vh;
         width: 100%;
         background-image: linear-gradient(to bottom, #014758da, #46c68ee1);
         display: flex;
@@ -340,11 +354,13 @@ footer{
         align-items: center;
         justify-content: center;
     }
-    .images{
-        width: 100%;
-        height: auto;
-        margin-top:1rem;
-        margin-bottom: 1rem;
+    .pic{
+        width: auto;
+        height: 38rem;
+    }
+    .content{
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 
 }
