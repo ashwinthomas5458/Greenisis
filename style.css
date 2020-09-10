@@ -296,7 +296,7 @@ footer{
 }
 .mobimgcontainer{
     width: 90%;
-    height: 28rem;
+    height: 26rem;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -356,7 +356,7 @@ footer{
     }
     .pic{
         width: auto;
-        height: 38rem;
+        height: 26rem;
     }
     .content{
         margin-left: 2rem;
