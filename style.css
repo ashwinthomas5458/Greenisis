@@ -207,6 +207,7 @@ a{
     position: absolute;
     top: 0;
     left: 0;
+    transition: 0.6s ease;
 }
 .back{
     width: 100%;
@@ -218,8 +219,6 @@ a{
     justify-content: space-around;
     align-items: center;    
     text-align: justify;
-
-    transition: 0.6s ease;
 }
 .back h4{
     color: #c9fb36;
@@ -408,6 +407,15 @@ footer{
     .content{
         margin-left: 2rem;
         margin-right: 2rem;
+    }
+    .gload{
+        width: 100px;
+    }
+    .loader{
+        width: 90px;
+    }
+    .lgrad{
+        width: 90px;
     }
 
 }
