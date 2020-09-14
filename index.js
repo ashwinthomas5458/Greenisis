@@ -23,23 +23,18 @@ const navSlide=()=>{
     })
 }
 navSlide();
-
+var k=0
 function step(n){
     var x=document.getElementsByClassName("pic")
-    for(i=0;i<6;i++){
-        if(x[i].style.display!="none"){
-            var f=i
-            break
-        }
+
+    if(k==0&n==-1){
+        k=5
     }
-    if(f==0&n==-1){
-        var k=5
-    }
-    else if(f==5&n==1){
+    else if(k==5&n==1){
         k=0
     }
     else{
-        k=f+n;
+        k=k+n;
     }
     for(j=0;j<6;j++){
         if(k!=j){
@@ -47,6 +42,7 @@ function step(n){
         }
         else{
             x[j].style.display="block"
+            console.log(j)
         }
     }
 }

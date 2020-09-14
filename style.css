@@ -36,10 +36,10 @@ body{
     height: 5px;
     background-image: linear-gradient(to right, #00000000, #00ff8f);
     position: absolute;
+    border-radius: 15px;
     top: 0px;
     left: -180px;
-    animation: loop 0.8s linear infinite;
-    
+    animation: loop 0.8s linear infinite;    
 }
 @keyframes loop{
     from{
@@ -111,6 +111,11 @@ a{
     display: flex;
     flex-direction: column;
     font-family: 'Polly';
+}
+.services{
+    width: 100%;
+    height: 100vh;
+    background-color: lightblue;
 }
 .about{
     width: 100%;
@@ -219,6 +224,7 @@ a{
     justify-content: space-around;
     align-items: center;    
     text-align: justify;
+    transition-delay: 2s;
 }
 .back h4{
     color: #c9fb36;
@@ -261,6 +267,14 @@ a{
 }
 .textcomment:hover{
     border-color: #18b2aa;
+}
+.qform{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .submit{
     width: 12rem;
@@ -341,7 +355,7 @@ footer{
 }
 .mobimgcontainer{
     width: 90%;
-    height: 26rem;
+    height: 18rem;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -368,7 +382,7 @@ footer{
         top: 0;
         height: 100vh;
         width: 100%;
-        background-image: linear-gradient(to bottom, #014758da, #46c68ee1);
+        background-color: #09191d;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -402,7 +416,7 @@ footer{
     }
     .pic{
         width: auto;
-        height: 26rem;
+        height: 18rem;
     }
     .content{
         margin-left: 2rem;
