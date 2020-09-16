@@ -357,6 +357,10 @@ header{
     width: 60%;
     height: 2rem;
     margin-bottom: 1rem;
+    -moz-appearance: textfield;   
+}
+input::-webkit-outer-spin-button, ::-webkit-inner-spin-button{
+    -webkit-appearance: none;
 }
 .textcomment{
     width: 60%;
