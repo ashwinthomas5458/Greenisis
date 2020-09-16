@@ -224,14 +224,20 @@ header{
     height: 50rem;
     background-color: #ffffff;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 .g1{
-    width: 50%;
+    width: 32%;
     height: 38rem;
     overflow: hidden;
     display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+.g1 .images{
+    width: auto;
+    height: 60rem;
 }
 .gcol{
     width: 24%;
@@ -239,6 +245,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin-left: 1rem;
 }
 .g2{
     width: 100%;
@@ -283,6 +290,10 @@ header{
     transform-style: preserve-3d;
 
 }
+.rcard p{
+    margin-right: 4rem;
+    margin-left: 4rem;
+}
 .rcard figure{
     width: 100%;
     height: 100%;
@@ -315,7 +326,7 @@ header{
 }
 .link{
     width: 100%;
-    height: auto;
+    height: 4rem;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -329,8 +340,8 @@ header{
     color: #ffffff;
     font-size: 1rem;
     font-weight: 1000;
+    display: none;
     font-family: 'Polly';
-    cursor: pointer;
     position: relative;
     top: 2rem;
 }
@@ -469,7 +480,7 @@ footer{
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 .mob{
