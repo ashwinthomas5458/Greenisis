@@ -87,7 +87,7 @@ header{
     display: flex;
     align-items: center;
 }
-a{
+.navlist a{
     text-decoration: none;
     color: white;
     font-family: 'Polly';
@@ -112,11 +112,6 @@ a{
     flex-direction: column;
     font-family: 'Polly';
 }
-.services{
-    width: 100%;
-    height: 100vh;
-    background-color: lightblue;
-}
 .about{
     width: 100%;
     height: auto;
@@ -138,22 +133,108 @@ a{
     text-align: justify;
     margin-bottom: 10rem;
 }
-.gallery{
+.services{
     width: 100%;
-    height: 40rem;
+    height: auto;
+    background-color: #dddddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.srow{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.scard{
+    width: 30%;
+    height: 18rem;
     background-color: #ffffff;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    color: #014758;
+    font-size: 1rem;
+    font-weight: 900;
+    text-align: center;
+
+}
+.scardw{
+    width: 30%;
+    height: 18rem;
+    background-color: #ffffff;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    opacity: 0;
+    cursor: unset;
+
+}
+.scard:hover {
+    background-color: #067e7a;
+    color: #c9fb36;
+}
+.book{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+.services button{
+    width: 18rem;
+    height: 3rem;
+    border: none;
+    background-color: #1ce08b;   
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 502;
+    font-family: 'Polly';
+    cursor: pointer;
+}
+.services button:hover{
+    background-color: #00ac61;
+}
+.internship{
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.internship h3{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    font-size: 2.4rem;
+    font-weight: 990;
+    color: #014758a1;
+}
+.gallery{
+    width: 100%;
+    height: 50rem;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
 }
 .g1{
-    width: 49%;
+    width: 50%;
     height: 38rem;
     overflow: hidden;
     display: flex;
 }
 .gcol{
-    width: 49%;
+    width: 24%;
     height: 40rem;
     display: flex;
     flex-direction: column;
@@ -183,74 +264,94 @@ a{
     background-image:linear-gradient(to bottom, #000000bd, #0000009f), url("https://data.whicdn.com/images/308312968/original.jpg");
     background-size: cover;
     background-position: center;
-    padding-bottom: 6rem;
-    padding-top: 4rem;
-}
-.prow{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-evenly;
-}
-.card{
-    width: 30%;
-    height: 20rem;
-    margin-top: 4rem;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
-.front{
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
-    color: #18b2aa; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 0.6s ease;
-}
-.back{
-    width: 100%;
-    height: 100%;
-    background-color: #50685096;
-    color: #18b2aa; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;    
-    text-align: justify;
-    transition-delay: 2s;
-}
-.back h4{
-    color: #c9fb36;
-}
-.back p{
-    margin: 1rem;
-}
-.front:hover{
-    opacity: 0;
 }
 .cardicon{
-    width: 4rem;
-    height: auto;
+    width: 3rem;
+    height: 3rem;
 }
-.card:hover{
-    background-color: #001a2059;
+.cardcontainer{
+    width: 40%;
+    height: 20rem;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.rcard{
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+    transform-style: preserve-3d;
+
+}
+.rcard figure{
+    width: 100%;
+    height: 100%;
+    font-weight: 900;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+.front{
+    background-color: #ffffff;
+    color: #014758;
+}
+.back{
+    background-color: #292929;
+    color: #00ff8f;
+    transform: rotateY(180deg);
+    opacity: 0;
+    transition: 0.3s ease;
+
+}
+.cardcontainer:hover .rcard{
+    transform: rotateY(180deg);
+}
+.cardcontainer:hover .back{
+    opacity: 1;
+}
+.link{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 1rem;
+}
+.link button{
+    width: 20rem;
+    height: 4rem;
+    border: none;
+    background-color: #1ce08b;   
     color: #ffffff;
+    font-size: 1rem;
+    font-weight: 1000;
+    font-family: 'Polly';
+    cursor: pointer;
+    position: relative;
+    top: 2rem;
+}
+.link button:hover{
+    background-color: #00ac61;
+}
+.linkicon{
+    width: 0.8rem;
+    height: 0.8rem;
+    
 }
 .feedback{
     width: 100%;
-    height: 40rem;
+    height: auto;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .textbox{
     width: 60%;
@@ -261,12 +362,6 @@ a{
     width: 60%;
     padding-bottom: 5rem;
     margin-bottom: 1rem;
-}
-.textbox:hover{
-    border-color: #18b2aa;
-}
-.textcomment:hover{
-    border-color: #18b2aa;
 }
 .qform{
     width: 100%;
@@ -291,14 +386,49 @@ a{
 .submit:hover{
     background-color: #18b2aa;
 }
-.contactinfo{
+.contactus{
     width: 100%;
-    height: 30rem;
-    background-color: #eeeeee;
+    height: auto;
+    background-color: #ffffff;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.contactinfo{
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start ;
+}
+.contactlogo{
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    margin-right: 1rem;
+    margin-top: 0.2rem;
+}
+.contlogo{
+    width: 4rem;
+    height: 4rem;
+}
+.contact{
+    text-align: justify;
+    color: #555;
+    font-size: 0.8rem;
+    margin: 0;
+}
+.contact a{
+    text-decoration: none;
+}
+.namec{
+    margin: 0;
+    color: #20ff9f;
+    font-size: 1.8rem;
+    font-weight: 800;
+    
 }
 footer{
     width: 100%;
@@ -312,21 +442,11 @@ footer{
     align-items: center;
     padding-bottom: 0.8rem;
     padding-top: 0.8rem;
-    position: absolute;
-    bottom: 0;
 }
 .ftr{
     font-family: 'Polly';
     margin: 0;
     
-}
-.contact{
-    text-align: justify;
-    color: #555;
-}
-.namec{
-    margin: 0;
-    color: #555;
 }
 .navicon {
     width: auto;
@@ -397,13 +517,6 @@ footer{
         flex-direction: column;
         justify-content: space-evenly;       
     }
-    .prow{
-        flex-direction: column;
-        align-items: center;
-    }
-    .card{
-        width: 80%;
-    }
     .gallery{
         height: auto;
     }
@@ -423,6 +536,23 @@ footer{
         margin-left: 2rem;
         margin-right: 2rem;
     }
+    .srow{
+        flex-direction: column;
+    }
+    .scardw{
+        display: none;
+    }
+    .scard{
+        width: 80%;
+    }
+    .cardcontainer{
+        width: 80%;
+    }
+    .link button{
+        width: 14rem;
+        height: 3rem;
+        top: 1.5rem;
+    }
     .gload{
         width: 100px;
     }
@@ -431,6 +561,9 @@ footer{
     }
     .lgrad{
         width: 90px;
+    }
+    .title{
+        font-size: 2.4rem;
     }
 
 }
