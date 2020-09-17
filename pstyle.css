@@ -52,7 +52,7 @@ body{
 header{
     width: 100%;
     height: auto;
-    background-color: #09191d;
+    background-color: #09191d00;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -104,55 +104,159 @@ header{
     justify-content: center;
     align-items: center;
 }
-.row{
-    width: 100%;
-    height: 30rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.row2{
-    width: 100%;
-    height: 30rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #eeeeee;
-}
-.details{
-    width: 42%;
-    height: auto;
-    display: flex;
-    justify-content: start;
-    margin-left: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-.details2{
-    width: 42%;
-    height: auto;
-    display: flex;
-    justify-content: end;
-    margin-right: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-.images{
-    max-width: 55%;
-    height: 27rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
 .mainbody h3{
-    margin-top: 5rem;
-    color: #1ce08b;
+    color: #ffffff;
     font-weight: 1000;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 .mainbody h2{
     color: #014578;
     font-weight: 900;
     font-size: 2.4rem;
+    margin-top: 4rem;
+}
+.mainbody p{
+    color: #555;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 2rem;
+    text-align: left;
+}
+.cover{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #070707c5, #00161500), url("a\ \(2\).jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: top;
+}
+.banana{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.row{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.col{
+    width: 48%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+}
+.portrait{
+    width: 32%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.6rem;
+}
+.landscape{
+    width: 48%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 0.6rem;
+}
+.pic{
+    width: 100%;
+}
+.ginger{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee;
+}
+.ginger .portrait{
+    width: 24%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+.ginger .row{
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+.orchid{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+.orchid .portrait{
+    width: 32%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+.orchid .row{
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+.container{
+    width: 80%;
+    height: auto;
+    display: none;
+    margin-bottom: 2rem;
+}
+.ornam{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee;
+}
+.ornam .portrait{
+    width: 15%;
+}
+.ornam .row{
+    margin-bottom: 1rem;
+}
+.book{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+    margin-top: 5rem;
+}
+.book button{
+    width: 18rem;
+    height: 3rem;
+    border: none;
+    background-color: #1ce08b;   
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 502;
+    font-family: 'Polly';
+    cursor: pointer;
+}
+.book button:hover{
+    background-color: #00ac61;
 }
 footer{
     width: 100%;
@@ -205,6 +309,33 @@ footer{
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;       
+    }
+    .mainbody h3{
+        font-size: 2.5rem;
+    }
+    .mainbody h2{
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+    .container{
+        display: flex;
+    }
+    .mainbody p{
+        margin-right: 1.8rem;
+        margin-left: 1.8rem;
+    }
+    .col{
+        margin-bottom: 2rem;
+    }
+    .ginger .row{
+        margin-bottom: 2rem;
+    }
+    .orchid .row{
+        margin-bottom: 2rem;
+    }
+    .book{
+        margin-top: 2rem;
+        margin-bottom: 3rem;
     }
 }
 .nav-active{
