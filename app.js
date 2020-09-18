@@ -1,7 +1,3 @@
-window.addEventListener('load', () =>{
-    const preloader =document.querySelector('.preloader')
-    preloader.classList.add('loaded')
-})
 var abt=document.getElementById("banner").offsetTop
 window.onscroll=function(){
     if(window.pageYOffset<abt){
