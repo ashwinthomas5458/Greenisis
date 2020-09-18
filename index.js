@@ -23,6 +23,10 @@ const navSlide=()=>{
     })
 }
 navSlide();
+var position=[document.getElementById("abt"),document.getElementById("serv"),document.getElementById("prod"),document.getElementById("cont")]
+function nav(p){
+  window.scrollTo(0,position[p].offsetTop)
+}
 var k=0
 function step(n){
     var x=document.getElementsByClassName("pic")
