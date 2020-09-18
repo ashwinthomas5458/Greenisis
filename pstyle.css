@@ -6,49 +6,6 @@ body{
     padding: 0;
     position: relative;
 }
-.preloader{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #1f1f1f;
-    position: fixed;
-    z-index: 2;
-}
- .loaded{
-     display: none;
- }
-.gload{
-  width: 200px;
-  height: auto;  
-}
-.loader{
-    width: 180px;
-    height: 6px;
-    margin-top: 12px;
-    position: relative;
-    overflow: hidden;
-}
-.lgrad{
-    width: 180px;
-    height: 5px;
-    background-image: linear-gradient(to right, #00000000, #00ff8f);
-    position: absolute;
-    border-radius: 15px;
-    top: 0px;
-    left: -180px;
-    animation: loop 0.8s linear infinite;    
-}
-@keyframes loop{
-    from{
-        left: -180px;
-    }
-    to{
-        left: 180px;
-    }
-}
 header{
     width: 100%;
     height: auto;
