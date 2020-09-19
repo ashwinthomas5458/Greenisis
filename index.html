@@ -21,10 +21,10 @@
         <div class="nav">
             <div class="navlist" id="nvlist">
                 <a href="https://greenisis.in" class="navitem">HOME</a>
-                <a onclick="nav(0)" class="navitem">ABOUT</a>
-                <a onclick="nav(1)" class="navitem">SERVICES</a>
-                <a onclick="nav(2)" class="navitem">PRODUCTS</a>
-                <a onclick="nav(3)" class="navitem">CONTACT US</a>
+                <a onclick="nav(about)" class="navitem">ABOUT</a>
+                <a onclick="nav(serv)" class="navitem">SERVICES</a>
+                <a onclick="nav(prod)" class="navitem">PRODUCTS</a>
+                <a onclick="nav(cont)" class="navitem">CONTACT US</a>
             </div>
             <div class="navicon">
                 <div class="line1"></div>
@@ -35,9 +35,9 @@
     </header>
     <div class="mainbody">
         <div class="cover">
-            <img src="Greenisislarge.png" id="banner">
+            <img src="Greenisislarge.png" id="banner" class="banner">
         </div>
-        <div class="about" id="abt">
+        <div class="about" id="about">
             <h3 class="title">ABOUT</h3>
             <p class="content">
                 Greenisis is a Tissue Culture lab based in Kerala, established in 2015 with a vision to promote agricultural production with the aid of technology. We seek to contribute to the agricultural sector by providing variety of plant tissue culture products in the domestic and foreign markets. We value our product quality and client relationships, and take great care in providing quality products to our customers. We take great care in upholding our product quality, which has helped us maintain a healthy base of satisfied clients, whom we ship products to, on a regular basis.
@@ -82,28 +82,27 @@
             <h3 class="title">SERVICES</h3>
             <div class="srow">
                 <div class="scard">
-                    <img src="https://www.flaticon.com/svg/static/icons/svg/2905/2905148.svg" class="cardicon">
-                    <p>LAB DESIGNING</p>
+                    <div class="sfront">
+                        <img src="https://www.flaticon.com/svg/static/icons/svg/2905/2905148.svg" class="cardicon">
+                        <p>LAB DESIGNING</p>
+                    </div>
+                    <div class="sback">
+                        <img src="https://www.flaticon.com/svg/static/icons/svg/2905/2905148.svg" class="cardicon">
+                        <p>
+                            Lab Designing services include:<br>DPR Draft, Equipment, Project on Turnkey basis
+                        </p>
+                    </div>
                 </div>
                 <div class="scard">
-                    <img src="https://www.flaticon.com/svg/static/icons/svg/681/681662.svg" class="cardicon">
-                    <p>DPR DRAFT</p>
+                    <div class="sfront">
+                        <img src="https://www.flaticon.com/svg/static/icons/svg/2918/2918009.svg" class="cardicon">
+                        <p>TISSUE CULTURE PRODUCTION</p>
+                    </div>
+                    <div class="sback">
+                        <img src="https://www.flaticon.com/svg/static/icons/svg/2918/2918009.svg" class="cardicon">
+                        <p>We engage in the production of various plant tissue culture products against confirmed order</p>
+                    </div>
                 </div>
-                <div class="scard">
-                    <img src="https://www.flaticon.com/svg/static/icons/svg/857/857498.svg" class="cardicon">
-                    <p>EQUIPMENT</p>
-                </div>
-            </div>
-            <div class="srow">
-                <div class="scard">
-                    <img src="https://www.flaticon.com/svg/static/icons/svg/3062/3062876.svg" class="cardicon">
-                    <p>PROJECT ON TURNKEY BASIS</p>
-                </div>
-                <div class="scard">
-                    <img src="https://www.flaticon.com/svg/static/icons/svg/2918/2918009.svg" class="cardicon">
-                    <p>TISSUE CULTURE PRODUCTION</p>
-                </div>
-                <div class="scardw" ></div>
             </div>
             <div class="book">
                 <button onclick="nav(3)">CONTACT US</button>
@@ -124,6 +123,11 @@
                         </figure>
                         <figure class="back">
                             <p>Available in 4 varieties:<br>Grand naine, Elakki, Nentran, Williams</p>
+                            <div class="plink">
+                                <a href="https://greenisis.in/products" target="_blank">
+                                    <button>Details</button>
+                                </a>
+                            </div>
                         </figure>
                     </div>
                 </div>
@@ -135,6 +139,11 @@
                         </figure>
                         <figure class="back">
                             <p>Customer Oriented production can be made for any ginger variety</p>
+                            <div class="plink">
+                                <a href="https://greenisis.in/products" target="_blank">
+                                    <button>Details</button>
+                                </a>
+                            </div>
                         </figure>
                     </div>
                 </div>
@@ -148,6 +157,11 @@
                         </figure>
                         <figure class="back">
                             <p>Available in 2 varieties:<br>Dendrobium and Phalaenopsis</p>
+                            <div class="plink">
+                                <a href="https://greenisis.in/products" target="_blank">
+                                    <button>Details</button>
+                                </a>
+                            </div>
                         </figure>
                     </div>
                 </div>
@@ -159,6 +173,11 @@
                         </figure>
                         <figure class="back">
                             <p>Vast varieties of ornamental plants can be supplied against order</p>
+                            <div class="plink">
+                                <a href="https://greenisis.in/products" target="_blank">
+                                    <button>Details</button>
+                                </a>
+                            </div>
                         </figure>
                     </div>
                 </div>
@@ -172,7 +191,7 @@
         <div class="contactus" id="cont">
             <h3 class="title">CONTACT US</h3>
             <div class="feedback">
-            <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="reloadp()"></iframe>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="loadp()"></iframe>
                 <form class="qform" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc-c5tT38TUEyBl4zKYBT6DrlPKeIqHJvTVqyQfbatgZ9XVeQ/formResponse" method="POST" target="hidden_iframe" onsubmit="validateForm()">
                     <input type="text" class="textbox" placeholder="Name" id="name" name="entry.1508669653">
                     <input type="number" class="textbox" placeholder="Number" id="phone" name="entry.1129334374">
