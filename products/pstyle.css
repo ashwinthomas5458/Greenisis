@@ -51,6 +51,7 @@ header{
     font-size: 1rem;
     font-weight: 800;
     margin-left: 0.8rem;
+    cursor: pointer;
 }
 .mainbody{
     width: 100%;
@@ -163,7 +164,7 @@ header{
     background-color: #ffffff;
 }
 .orchid .portrait{
-    width: 32%;
+    width: 24%;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 }
@@ -173,7 +174,7 @@ header{
     margin-bottom: 5rem;
 }
 .container{
-    width: 80%;
+    width: 70%;
     height: auto;
     display: none;
     margin-bottom: 2rem;
@@ -283,6 +284,12 @@ footer{
     }
     .col{
         margin-bottom: 2rem;
+    }
+    .orchid .portrait{
+        width: 18%;
+    }
+    .ginger .portrait{
+        width: 18%;
     }
     .ginger .row{
         margin-bottom: 2rem;

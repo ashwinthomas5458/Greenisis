@@ -16,6 +16,11 @@ const navSlide=()=>{
         icon.classList.toggle('x')
     })
 }
+function mov(m){
+    window.scrollTo(0, (m.offsetTop)-20)
+    
+}
+
 navSlide();
 function banana(b){
     var banana=document.getElementById("banana")

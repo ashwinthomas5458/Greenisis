@@ -1,6 +1,13 @@
 window.addEventListener('load', () =>{
-    const preloader =document.querySelector('.preloader')
-    preloader.classList.add('loaded')
+    window.scrollTo(0,0)
+    const loader =document.querySelector('.loader')
+    const preloader=document.querySelector('.preloader')
+    const banner=document.querySelector('.banner')
+    const navbar=document.querySelector('.nav')
+    loader.classList.add('loaderaft')
+    preloader.classList.add('preloaderanime')
+    banner.classList.add('banneraft')
+    navbar.classList.add('navanime')
 })
 var abt=document.getElementById("banner").offsetTop
 window.onscroll=function(){
@@ -23,9 +30,9 @@ const navSlide=()=>{
     })
 }
 navSlide();
-var position=[document.getElementById("abt"),document.getElementById("serv"),document.getElementById("prod"),document.getElementById("cont")]
+
 function nav(p){
-  window.scrollTo(0,position[p].offsetTop)
+  window.scrollTo(0,(p.offsetTop)-20)
 }
 var k=0
 function step(n){
@@ -90,7 +97,6 @@ function validateName() {
 
 }
 
-
 function validateForm() {
   if (!validateName() || !validatePhone() || !validateEmail()) {
 
@@ -103,8 +109,8 @@ function validateForm() {
   }
 
 }
-function reloadp(){
-    if(submitted){
-        window.location="index.html"
-    }
+function loadp(){
+  if(submitted){
+      window.location="https://greenisis.in"
+  }
 }
