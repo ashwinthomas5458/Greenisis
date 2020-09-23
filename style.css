@@ -653,6 +653,7 @@ footer{
         background-color: #eeeeee;
         color: #222222;
         text-align: left;
+        justify-content: left;
         margin-left: 5%;
     }
     .sback{
@@ -661,6 +662,7 @@ footer{
         background-color: #eeeeee;
         color: #222222;
         text-align: left;
+        justify-content: left;
         position: relative;
         bottom: 10rem;
         margin-left: 5%;
@@ -671,6 +673,7 @@ footer{
         background-color: #eeeeee;
         color: #222222;
         text-align: right;
+        justify-content: right;
         margin-right: 5%;
     }
     .sbackt{
@@ -680,6 +683,7 @@ footer{
         color: #222222;
         text-align: right;
         position: relative;
+        justify-content: right;
         bottom: 10rem;
         margin-right: 5%;
     }
