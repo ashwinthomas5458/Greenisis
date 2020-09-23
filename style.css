@@ -100,9 +100,9 @@ header{
 .navlist a{
     text-decoration: none;
     color: white;
-    font-family: 'Polly';
+    font-family: 'Raleway', sans-serif;
     font-size: 1rem;
-    font-weight: 800;
+    font-weight: 900;
     margin-left: 0.8rem;
     cursor: pointer;
 }
@@ -131,7 +131,8 @@ header{
     padding: 0;
     display: flex;
     flex-direction: column;
-    font-family: 'Polly';
+    font-family:'Poppins', sans-serif;
+
 }
 .about{
     width: 100%;
@@ -144,7 +145,7 @@ header{
 }
 .title{
     color: #1ce08b;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 3rem;
     margin-bottom: 6rem;
 }
@@ -178,9 +179,20 @@ header{
     margin-right: 2rem;
     margin-left: 2rem;
     font-size: 1rem;
-    font-weight: 900;
+    font-weight: 600;
 }
 .sfront{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    color: #014758;
+    text-align: center;
+}
+.sfrontt{
     width: 100%;
     height: 100%;
     display: flex;
@@ -205,10 +217,31 @@ header{
     bottom: 20rem;
     opacity: 0;
 }
+.sbackt{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #067e7a;
+    color: #c9fb36;
+    text-align: center;
+    position: relative;
+    bottom: 20rem;
+    opacity: 0;
+}
 .sback p{
     margin:2rem;
 }
 .sback:hover {
+    opacity: 1;
+    transition: 0.5s ease;
+}
+.sbackt p{
+    margin:2rem;
+}
+.sbackt:hover {
     opacity: 1;
     transition: 0.5s ease;
 }
@@ -227,8 +260,8 @@ header{
     background-color: #1ce08b;   
     color: #ffffff;
     font-size: 1rem;
-    font-weight: 502;
-    font-family: 'Polly';
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
     cursor: pointer;
 }
 .services button:hover{
@@ -247,7 +280,7 @@ header{
     margin-top: 4rem;
     margin-bottom: 4rem;
     font-size: 2.4rem;
-    font-weight: 990;
+    font-weight: 600;
     color: #014758a1;
 }
 .gallery{
@@ -324,7 +357,7 @@ header{
 .rcard figure{
     width: 100%;
     height: 100%;
-    font-weight: 900;
+    font-weight: 500;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -366,8 +399,8 @@ header{
     background-color: #363636;   
     color: #ffffff;
     font-size: 0.8rem;
-    font-weight: 1000;
-    font-family: 'Polly';
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
 }
 .plink button:hover{
     background-color: #1d1d1d;
@@ -376,7 +409,7 @@ header{
     width: 100%;
     height: 4rem;
     display: flex;
-    justify-content: end;
+    justify-content: right;
     align-items: center;
     margin-top: 1rem;
 }
@@ -387,8 +420,8 @@ header{
     background-color: #1ce08b;   
     color: #ffffff;
     font-size: 1rem;
-    font-weight: 1000;
-    font-family: 'Polly';
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
     position: relative;
     top: 2rem;
 }
@@ -440,9 +473,9 @@ input::-webkit-outer-spin-button, ::-webkit-inner-spin-button{
     background-color: #067e7a;   
     color: #ffffff;
     font-size: 0.8rem;
-    font-weight: 502;
+    font-weight: 700;
     letter-spacing: 0.6rem;
-    font-family: 'Polly';
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 2rem;
 }
 .submit:hover{
@@ -489,7 +522,7 @@ input::-webkit-outer-spin-button, ::-webkit-inner-spin-button{
     margin: 0;
     color: #20ff9f;
     font-size: 1.8rem;
-    font-weight: 800;
+    font-weight: 700;
     
 }
 footer{
@@ -506,7 +539,7 @@ footer{
     padding-top: 0.8rem;
 }
 .ftr{
-    font-family: 'Polly';
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     
 }
@@ -533,7 +566,7 @@ footer{
 .mob{
     display: none;
     width: 100%;
-    height: 40rem;
+    height: 30rem;
     overflow: hidden;
 }
 .mobimgcontainer{
@@ -547,9 +580,9 @@ footer{
     
 }
 .sbtn{
-    width: auto;
-    height: auto;
-    background-color: #ffffff3f;
+    width: 10%;
+    height: 5rem;
+    background-color: #eeeeee;
     border: none;
 }
 .sicon{
@@ -598,20 +631,89 @@ footer{
         margin-left: 2rem;
         margin-right: 2rem;
     }
+    .services{
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+    }
     .srow{
         flex-direction: column;
     }
-    .scardw{
-        display: none;
-    }
     .scard{
-        width: 80%;
+        width: 90%;
+        height: 10rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        background-color: #eeeeee;
+    }
+    .sfront{
+        width: 95%;
+        flex-direction: row;
+        background-color: #eeeeee;
+        color: #222222;
+        text-align: left;
+        justify-content: left;
+        margin-left: 5%;
+    }
+    .sback{
+        width: 95%;
+        flex-direction: row;
+        background-color: #eeeeee;
+        color: #222222;
+        text-align: left;
+        justify-content: left;
+        position: relative;
+        bottom: 10rem;
+        margin-left: 5%;
+    }
+    .sfrontt{
+        width: 95%;
+        flex-direction: row-reverse;
+        background-color: #eeeeee;
+        color: #222222;
+        text-align: right;
+        justify-content: right;
+        margin-right: 5%;
+    }
+    .sbackt{
+        width: 95%;
+        flex-direction: row-reverse;
+        background-color: #eeeeee;
+        color: #222222;
+        text-align: right;
+        position: relative;
+        justify-content: right;
+        bottom: 10rem;
+        margin-right: 5%;
+    }
+    .sbackt p{
+        margin:0.8rem;
+    }
+    .sback p{
+        margin:0.8rem;
+    }
+    .sfrontt p{
+        margin:0.8rem;
+    }
+    .sfront p{
+        margin:0.8rem;
+    }
+    .services button{
+        width: 70%;
+    }
+    .products{
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem; 
     }
     .cardcontainer{
         width: 80%;
+        height: 15rem;
+        margin-left: 0;
+        margin-right: 0;
     }
     .link button{
-        width: 14rem;
+        width: 12rem;
         height: 3rem;
         top: 1.5rem;
     }

@@ -47,9 +47,9 @@ header{
 .navlist a{
     text-decoration: none;
     color: white;
-    font-family: 'Polly';
+    font-family: 'Raleway', sans-serif;
     font-size: 1rem;
-    font-weight: 800;
+    font-weight: 900;
     margin-left: 0.8rem;
     cursor: pointer;
 }
@@ -57,19 +57,19 @@ header{
     width: 100%;
     height: auto;
     display: flex;
-    font-family: 'Polly';
+    font-family: 'Poppins', sans-serif;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .mainbody h3{
     color: #ffffff;
-    font-weight: 1000;
+    font-weight: 700;
     font-size: 4rem;
 }
 .mainbody h2{
     color: #014578;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 2.4rem;
     margin-top: 4rem;
 }
@@ -209,8 +209,8 @@ header{
     background-color: #1ce08b;   
     color: #ffffff;
     font-size: 1rem;
-    font-weight: 502;
-    font-family: 'Polly';
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
     cursor: pointer;
 }
 .book button:hover{
@@ -230,7 +230,7 @@ footer{
     padding-top: 0.8rem;
 }
 .ftr{
-    font-family: 'Polly';
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     
 }
