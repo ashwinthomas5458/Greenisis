@@ -16,7 +16,6 @@ const front=document.querySelector('.sfront')
 const frontt=document.querySelector('.sfrontt')
 const rcard=document.querySelectorAll('.rcard')
 const x= (((servtop-frontt.offsetTop)*2)/3)+50
-console.log(x)
 window.onscroll=function(){
     if(window.pageYOffset<abt){
         document.getElementById("header").style.backgroundColor="#09191d00"
