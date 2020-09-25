@@ -640,6 +640,7 @@ footer{
         border-top-left-radius: 2rem;
         border-top-right-radius: 2rem;
         background-color: #292929;
+        overflow: hidden;
     }
     .srow{
         flex-direction: column;
