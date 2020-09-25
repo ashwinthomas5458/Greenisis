@@ -9,7 +9,13 @@ window.addEventListener('load', () =>{
     banner.classList.add('banneraft')
     navbar.classList.add('navanime')
 })
-var abt=document.getElementById("banner").offsetTop
+const abt=document.getElementById("banner").offsetTop
+const servtop=document.getElementById("serv").offsetTop
+const prodset=document.querySelector('.prodmark').offsetTop
+const front=document.querySelector('.sfront')
+const frontt=document.querySelector('.sfrontt')
+const rcard=document.querySelectorAll('.rcard')
+const x= (((servtop-frontt.offsetTop)*2)/3)+50
 window.onscroll=function(){
     if(window.pageYOffset<abt){
         document.getElementById("header").style.backgroundColor="#09191d00"
@@ -18,6 +24,24 @@ window.onscroll=function(){
     if(window.pageYOffset>abt){
         document.getElementById("header").style.backgroundColor="#09191d"
         document.getElementById("logo").style.display="flex"
+    }
+    if(window.pageYOffset>(servtop+x)){
+      front.classList.add('sfrontanime')
+      frontt.classList.add('sfronttanime')
+    }
+    if(window.pageYOffset<(servtop+x)){
+      front.classList.remove('sfrontanime')
+      frontt.classList.remove('sfronttanime')
+    }
+    if(window.pageYOffset>prodset){
+      rcard.forEach(element => {
+        element.classList.add('rcardanime')
+      });
+    }
+    if(window.pageYOffset<servtop){
+      rcard.forEach(element => {
+        element.classList.remove('rcardanime')
+      });
     }
 }
 const navSlide=()=>{
@@ -53,7 +77,6 @@ function step(n){
         }
         else{
             x[j].style.display="block"
-            console.log(j)
         }
     }
 }
