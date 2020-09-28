@@ -640,7 +640,6 @@ footer{
         border-top-left-radius: 2rem;
         border-top-right-radius: 2rem;
         background-color: #292929;
-        overflow-x: hidden;
     }
     .srow{
         flex-direction: column;
@@ -652,6 +651,7 @@ footer{
         font-weight: 600;
         margin-bottom: 1rem;
         margin-top: 1rem;
+        overflow: hidden;
     }
     .cardicon{
         fill: #eeeeee;
