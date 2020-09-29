@@ -10,12 +10,11 @@ window.addEventListener('load', () =>{
     navbar.classList.add('navanime')
 })
 const abt=document.getElementById("banner").offsetTop
-const servtop=document.getElementById("serv").offsetTop
 const prodset=document.querySelector('.prodmark').offsetTop
+const servtop=document.getElementById("servmark").offsetTop
 const front=document.querySelector('.sfront')
 const frontt=document.querySelector('.sfrontt')
 const rcard=document.querySelectorAll('.rcard')
-const x= (((servtop-frontt.offsetTop)*2)/3)+50
 window.onscroll=function(){
     if(window.pageYOffset<abt){
         document.getElementById("header").style.backgroundColor="#09191d00"
@@ -25,11 +24,11 @@ window.onscroll=function(){
         document.getElementById("header").style.backgroundColor="#09191d"
         document.getElementById("logo").style.display="flex"
     }
-    if(window.pageYOffset>(servtop+x)){
+    if(window.pageYOffset>(servtop)){
       front.classList.add('sfrontanime')
       frontt.classList.add('sfronttanime')
     }
-    if(window.pageYOffset<(servtop+x)){
+    if(window.pageYOffset<(servtop-50)){
       front.classList.remove('sfrontanime')
       frontt.classList.remove('sfronttanime')
     }
