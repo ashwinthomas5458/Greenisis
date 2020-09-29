@@ -109,7 +109,7 @@ header{
 .cover{
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(to bottom, #00000094,#00000079), url("https://img5.goodfon.com/wallpaper/nbig/b/27/greenhouse-plants-green-tropical-exotic-nature-interior.jpg");
+    background-image: linear-gradient(to bottom, #00000094,#00000079), url("Bg/mainbg.jpg");
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -331,7 +331,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image:linear-gradient(to bottom, #000000bd, #0000009f), url("https://data.whicdn.com/images/308312968/original.jpg");
+    background-image:linear-gradient(to bottom, #000000bd, #0000009f), url("Bg/prodbg.jpg");
     background-size: cover;
     background-position: center;
 }
