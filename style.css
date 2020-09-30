@@ -535,8 +535,8 @@ footer{
     height: 1rem;
     background-color: #09191d;
     color: #333333;
-    font-size: 1rem;
-    letter-spacing: 0.8rem;
+    font-size: 0.8rem;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
