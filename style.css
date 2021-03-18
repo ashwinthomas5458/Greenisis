@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -15,7 +18,7 @@ body{
     align-items: center;
     background-color: #1f1f1f;
     position: fixed;
-    z-index: 2;
+    z-index: 10;
 }
 .gload{
   width: 200px;
@@ -60,50 +63,57 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
+    padding: 1rem 2rem;
     position: fixed;
     transition: 1s;
-    z-index: 1;
-
+    z-index: 3;
+    transition: 0.4s ease;
+}
+.navbaractive{
+    background-color: #09191d;
+    box-shadow: 2px 2px 40px #00000044;
 }
 .logo{
     width: 2rem;
     height: 2rem;
     margin-left: 2rem;
     display: flex;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+.logoactive{
+    opacity: 1;
 }
 #logo{
-    display: none;
     width: 100%;
     height: auto;
 }
 .nav{
     width: auto;
-    height: 2rem;
+    height: auto;
     display: flex;
     align-items: center;
     opacity: 0;
 }
 .navanime{
     opacity: 1;
-    transition-duration: 0.8s;
-    transition-delay: 1s;
+    transition: 0.6s ease 1s;
 }
 .navlist{
     width: auto;
-    height: 2rem;
-    margin-right: 2rem;
+    height: auto;
+    margin: 0 1rem;
     display: flex;
     align-items: center;
 }
-.navlist a{
+.navlist li{
     text-decoration: none;
+    list-style: none;
     color: white;
-    font-family: 'Raleway', sans-serif;
+    font-family:'Poppins', sans-serif;
     font-size: 1rem;
-    font-weight: 900;
-    margin-left: 0.8rem;
+    font-weight: 600;
+    margin: 0 0.4rem;
     cursor: pointer;
 }
 .cover{
@@ -112,6 +122,7 @@ header{
     background-image: linear-gradient(to bottom, #00000094,#00000079), url("Bg/mainbg.jpg");
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -124,20 +135,22 @@ header{
 }
 .banneraft{
     transform: translateY(0vh);
-    transition-duration: 0.5s;
-    transition-delay: 1s;
+    transition: 0.4s ease 1s;
 }
 .mainbody{
     padding: 0;
     display: flex;
     flex-direction: column;
     font-family:'Poppins', sans-serif;
-
+}
+button{
+    cursor: pointer;
 }
 .about{
     width: 100%;
     height: auto;
-    background-color: #eeeeee;
+    padding: 10rem 0;
+    background-color: #fcfcfc;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -147,23 +160,27 @@ header{
     color: #1ce08b;
     font-weight: 700;
     font-size: 3rem;
-    margin-bottom: 6rem;
+    margin: 3rem 2rem;
+}
+.about .title{
+    align-self: flex-start;
+    margin: 0 10rem;
 }
 .content{
     color: #555;
-    margin-left: 5rem;
-    margin-right: 5rem;
-    text-align: justify;
-    margin-bottom: 10rem;
+    margin: 3rem 10rem;
+    text-align: left;
+    font-size: 1.2rem;
 }
 .services{
     width: 100%;
     height: auto;
-    background-color: #dddddd;
+    background-color: #fcfcfc;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 5rem 0;
 }
 .srow{
     width: 100%;
@@ -180,19 +197,13 @@ header{
     margin-left: 2rem;
     font-size: 1rem;
     font-weight: 600;
+    box-shadow: 2px 2px 40px #00000028;
+}
+.scard h2{
+    font-size: 1rem;
+    margin: 0 1rem;
 }
 .sfront{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-    color: #014758;
-    text-align: center;
-}
-.sfrontt{
     width: 100%;
     height: 100%;
     display: flex;
@@ -210,40 +221,19 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #067e7a;
-    color: #c9fb36;
+    background-color: #ffffff;
+    color: #484848;
     text-align: center;
     position: relative;
     bottom: 20rem;
     opacity: 0;
-}
-.sbackt{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #067e7a;
-    color: #c9fb36;
-    text-align: center;
-    position: relative;
-    bottom: 20rem;
-    opacity: 0;
+    transition: 0.5s ease;
 }
 .sback p{
     margin:2rem;
 }
 .sback:hover {
-    opacity: 1;
-    transition: 0.5s ease;
-}
-.sbackt p{
-    margin:2rem;
-}
-.sbackt:hover {
-    opacity: 1;
-    transition: 0.5s ease;
+    opacity: 1;  
 }
 .book{
     width: 100%;
@@ -263,22 +253,25 @@ header{
     font-weight: 900;
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
+    transition: 0.4s ease;
+    box-shadow: 2px 2px 40px #00000033;
 }
 .services button:hover{
     background-color: #00ac61;
+    box-shadow: 2px 2px 40px #00000044;
 }
 .internship{
     width: 100%;
     height: auto;
+    padding: 8rem 0;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    box-shadow: 2px 2px 40px #00000044;
 }
-.internship h3{
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+.internship h1{
     font-size: 2.4rem;
     font-weight: 600;
     color: #014758a1;
@@ -293,47 +286,19 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.g1{
-    width: 32%;
-    height: 38rem;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    margin-right: 2rem;
-}
-.g1 .images{
-    width: auto;
-    height: 60rem;
-}
-.gcol{
-    width: 24%;
-    height: 40rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-left: 1rem;
-}
-.g2{
-    width: 100%;
-    height: 46%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-}
-.images{
-    width: auto;
-    height: 100%;
+    box-shadow: 2px 2px 40px #00000044;
 }
 .products{
     width: 100%;
     height: auto;
     display: flex;
+    padding: 4rem 0;
     flex-direction: column;
     align-items: center;
-    background-image:linear-gradient(to bottom, #000000bd, #0000009f), url("Bg/prodbg.jpg");
+    background-color: #484848;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 .cardicon{
     width: 3rem;
@@ -428,7 +393,8 @@ header{
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
     position: relative;
-    top: 2rem;
+    top: 6rem;
+    transition: 0.3s ease;
 }
 .link button:hover{
     background-color: #00ac61;
@@ -446,8 +412,9 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin:1rem 0;
+    padding: 1rem 0;
+
 }
 .textbox{
     width: 60%;
@@ -458,10 +425,25 @@ header{
 input::-webkit-outer-spin-button, ::-webkit-inner-spin-button{
     -webkit-appearance: none;
 }
+input, textarea{
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
 .textcomment{
     width: 60%;
-    padding-bottom: 5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;
+}
+.textbox, .textcomment, .textbox:focus, .textcomment:focus {
+    outline: none;
+    border: none;
+    -moz-border-colors: none;
+    -webkit-border-before: none;
+    border-bottom: 1px solid #555;
+    box-shadow: none;
+}
+.textbox, .textcomment{
+    padding: 0 4px;
 }
 .qform{
     width: 100%;
@@ -473,15 +455,16 @@ input::-webkit-outer-spin-button, ::-webkit-inner-spin-button{
 }
 .submit{
     width: 12rem;
-    height: 2.4rem;
+    height: 3rem;
     border: none;
     background-color: #067e7a;   
     color: #ffffff;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.6rem;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 2rem;
+    transition: 0.3s ease;
 }
 .submit:hover{
     background-color: #18b2aa;
@@ -532,9 +515,9 @@ input::-webkit-outer-spin-button, ::-webkit-inner-spin-button{
 }
 footer{
     width: 100%;
-    height: 1rem;
+    height: 2rem;
     background-color: #09191d;
-    color: #333333;
+    color: #666666;
     font-size: 0.8rem;
     font-family: 'Poppins', sans-serif;
     display: flex;
@@ -556,42 +539,17 @@ footer{
     margin-right: 1rem;
     transition: all 0.5s ease;
 }
-.pc{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.mob{
-    display: none;
-    width: 100%;
-    height: 30rem;
-    overflow: hidden;
-}
-.mobimgcontainer{
-    width: 90%;
-    height: 18rem;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    
-}
-.sbtn{
-    width: 10%;
-    height: 5rem;
-    background-color: #eeeeee;
-    border: none;
-}
-.sicon{
-    width: auto;
-    height: 1rem;
-    cursor: pointer;
-    
+.left,
+.right,
+.bottom{
+    transform: translateY(80%);
+    opacity: 0;
+    transition: 0.4s ease;
 }
 @media screen and (max-width:700px){
+    header{
+        padding: 1rem 0;
+    }
     .navlist{
         position: absolute;
         right: 0;
@@ -604,36 +562,48 @@ footer{
         justify-content: space-evenly;
         align-items: center;
         margin:0;
-        transform: translateX(100%);
-        transition: 0.5s ease-in;
+        padding: 0;
+        transition: 0.6s ease-in-out;
+        clip-path: circle(100px at 110% -25%);
+        -webkit-clip-path: circle(100px at 110% -25%);
+    }
+    .nav-active{
+        clip-path: circle(1400px at 110% -25%);
+        -webkit-clip-path: circle(1400px at 110% -25%);
+    }
+    .navitem{
+        opacity: 0;
+        transition: 0.3s ease;
+    }
+    .navaactive{
+        opacity: 1;
+        transition-delay: 0.5s;
     }
     .navicon{
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;       
+        justify-content: space-evenly;      
     }
-    .gallery{
-        height: auto;
+    .cover{
+        background-attachment: unset;
     }
-    .pc{
-        display: none;
+    .about{
+        padding: 4rem 0;
     }
-    .mob{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .title{
+        font-size: 2rem;
+        margin: 1rem 2rem;
     }
-    .pic{
-        width: auto;
-        height: 18rem;
+    .about .title{
+        margin: 1rem 2rem;
     }
     .content{
-        margin-left: 2rem;
-        margin-right: 2rem;
+        margin: 0 2rem;
+        font-size: 0.8rem;
     }
     .services{
-        border-top-left-radius: 2rem;
-        border-top-right-radius: 2rem;
+        border-top-left-radius: 18px;
+        border-top-right-radius: 18px;
         background-color: #292929;
     }
     .srow{
@@ -658,31 +628,7 @@ footer{
         color:#eeeeee;
         text-align: left;
         justify-content: left;
-        transform: translateX(-110%);
-        opacity: 0;
-        transition: 0.5s ease;
-    }
-    .sfrontt{
-        width: 100%;
-        flex-direction: row-reverse;
-        background-color:#333333;
-        color:#eeeeee;
-        text-align: right;
-        justify-content: right;
-        transform: translateX(110%);
-        opacity: 0;
-        transition: 0.5s ease;
-    }
-    .sfrontanime{
-        transform: translateX(0);
-        opacity: 1;
-        transition: 0.4s ease;
-    }
-    .sfronttanime{
-        transform: translateX(0);
-        opacity: 1;
-        transition: 0.4s ease;
-        transition-delay: 0.1s;
+        padding: 16px;
     }
     .sback{
         width: 100%;
@@ -693,21 +639,19 @@ footer{
         justify-content: left;
         position: relative;
         bottom: 10rem;
+        padding: 16px;
     }
-    .sbackt{
-        width: 100%;
+    .reverse{
         flex-direction: row-reverse;
-        background-color:#333333;
-        color: #eeeeee;
         text-align: right;
-        position: relative;
-        justify-content: right;
-        bottom: 10rem;
-       
+        justify-content: end;
     }
     .scard p{
         margin:0.8rem;
         width: 66%;
+    }
+    .rcard h2{
+        font-size: 1.2rem;
     }
     .book{
         justify-content: right;
@@ -717,7 +661,13 @@ footer{
     .services button{
         width: 70%;
         position: relative;
-        top: 1.5rem;
+        top: 6.5rem;
+    }
+    .internship{
+        padding: 3rem 0;
+    }
+    .products{
+        background-attachment: unset;
     }
     .prodmark{
         width: 100%;
@@ -726,8 +676,8 @@ footer{
         margin-bottom: 7rem;
     }
     .products{
-        border-bottom-left-radius: 2rem;
-        border-bottom-right-radius: 2rem; 
+        border-bottom-left-radius: 18px;
+        border-bottom-right-radius: 18px; 
     }
     .cardcontainer{
         width: 80%;
@@ -735,13 +685,6 @@ footer{
         margin-left: 0;
         margin-right: 0;
         overflow: hidden;
-    }
-    .rcard{
-        transform: translateY(104%);
-    }
-    .rcardanime{
-        transform: translateY(0);
-        transition: 0.4s ease;
     }
     .link{
         margin-bottom: 2rem;
@@ -752,6 +695,12 @@ footer{
         height: 3rem;
         top: 0;
     }
+    input, textarea{
+        font-size: 0.8rem;
+    }
+    .textbox, .textcomment{
+        width: 80%;
+    }
     .gload{
         width: 100px;
     }
@@ -761,14 +710,19 @@ footer{
     .lgrad{
         width: 90px;
     }
-    .title{
-        font-size: 2.4rem;
-        margin-bottom: 2rem;
+    .left{
+        transform: translateX(-110%);
+    }
+    .right{
+        transform: translateX(110%);
+    }
+    .bottom{
+        transform: translateY(30%);
     }
 }
-
-.nav-active{
-    transform: translateX(0);
+.objectappear{
+    transform: translate(0, 0);
+    opacity: 1;
 }
 .x .line1{
     transform: rotate(-45deg) translate(-5px,6px);
