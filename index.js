@@ -1,55 +1,28 @@
 window.addEventListener('load', () =>{
     window.scrollTo(0,0)
-    const loader =document.querySelector('.loader')
-    const preloader=document.querySelector('.preloader')
-    const banner=document.querySelector('.banner')
-    const navbar=document.querySelector('.nav')
-    loader.classList.add('loaderaft')
-    preloader.classList.add('preloaderanime')
-    banner.classList.add('banneraft')
-    navbar.classList.add('navanime')
+    const loader =document.querySelector('.loader');
+    const preloader=document.querySelector('.preloader');
+    const banner=document.querySelector('.banner');
+    const navbar=document.querySelector('.nav');
+    const products = document.querySelector('.products');
+    loader.classList.add('loaderaft');
+    preloader.classList.add('preloaderanime');
+    banner.classList.add('banneraft');
+    navbar.classList.add('navanime');
+    products.style.backgroundImage = "linear-gradient(to bottom, #000000bd, #0000009f), url(Bg/prodbg.jpg)";
 })
-const abt=document.getElementById("banner").offsetTop
-const prodset=document.querySelector('.prodmark').offsetTop
-const servtop=document.getElementById("servmark").offsetTop
-const front=document.querySelector('.sfront')
-const frontt=document.querySelector('.sfrontt')
-const rcard=document.querySelectorAll('.rcard')
-window.onscroll=function(){
-    if(window.pageYOffset<abt){
-        document.getElementById("header").style.backgroundColor="#09191d00"
-        document.getElementById("logo").style.display="none"
-    }
-    if(window.pageYOffset>abt){
-        document.getElementById("header").style.backgroundColor="#09191d"
-        document.getElementById("logo").style.display="flex"
-    }
-    if(window.pageYOffset>(servtop)){
-      front.classList.add('sfrontanime')
-      frontt.classList.add('sfronttanime')
-    }
-    if(window.pageYOffset<(servtop-50)){
-      front.classList.remove('sfrontanime')
-      frontt.classList.remove('sfronttanime')
-    }
-    if(window.pageYOffset>prodset){
-      rcard.forEach(element => {
-        element.classList.add('rcardanime')
-      });
-    }
-    if(window.pageYOffset<servtop){
-      rcard.forEach(element => {
-        element.classList.remove('rcardanime')
-      });
-    }
-}
+
 const navSlide=()=>{
-    const icon=document.querySelector('.navicon')
-    const nav=document.querySelector('.nav')
-    const bar=document.querySelector('.navlist')
+    const icon=document.querySelector('.navicon');
+    const nav=document.querySelector('.nav');
+    const bar=document.querySelector('.navlist');
+    const navlinks = document.querySelectorAll('.navitem');
     nav.addEventListener('click', ()=> {
-        bar.classList.toggle('nav-active')
-        icon.classList.toggle('x')
+        bar.classList.toggle('nav-active');
+        icon.classList.toggle('x');
+        navlinks.forEach(link =>{
+            link.classList.toggle('navaactive');
+        })
     })
 }
 navSlide();
@@ -57,82 +30,36 @@ navSlide();
 function nav(p){
   window.scrollTo(0,(p.offsetTop)-20)
 }
-var k=0
-function step(n){
-    var x=document.getElementsByClassName("pic")
-
-    if(k==0&n==-1){
-        k=5
-    }
-    else if(k==5&n==1){
-        k=0
-    }
-    else{
-        k=k+n;
-    }
-    for(j=0;j<6;j++){
-        if(k!=j){
-            x[j].style.display="none"
+function scrollappear(object){
+    var objects=document.querySelectorAll(object);
+    var screenposition=window.innerHeight/1.2;
+    objects.forEach(obj =>{
+        var objposition=obj.getBoundingClientRect().top;
+        if(objposition<screenposition){
+        obj.classList.add('objectappear');
         }
-        else{
-            x[j].style.display="block"
+        if(objposition>window.innerHeight){
+        obj.classList.remove('objectappear');
         }
+    })
+}
+function navfade(){
+    var screenposition=window.innerHeight/2.1;
+    const navbar=document.querySelector('header');
+    const logo = document.querySelector('.logo');
+
+    if(window.pageYOffset<screenposition){
+        navbar.classList.remove('navbaractive');
+        logo.classList.remove('logoactive');
+    }
+    if(window.pageYOffset>screenposition){
+        navbar.classList.add('navbaractive');
+        logo.classList.add('logoactive');
     }
 }
-var submitted=false
-function validateName() {
-    var name = document.getElementById('name').value;
-    if(name.length == 0) {
-      alert("Name can't be blank") ;
-      return false;
-
-    }
-    if (!name.match(/^[a-zA-Z]{3,}(?: [a-zA-Z]+){0,2}$/)) {
-      alert("Please enter your correct name") ;//Validation Message
-      return false;
-    }
-    return true;
-  }
-
-  function validatePhone() {
-    var phone = document.getElementById('phone').value;
-    if(phone.length == 0) {
-      alert("Phone number can't be blank") ;//Validation Message
-      return false;
-    }
-
-   return true;
-
- }
-
- function validateEmail () {
-
-  var email = document.getElementById('email').value;
-  if(email.length == 0) {
-    alert("Email can't be blank") ;//Validation Message
-    return false;
-
-  }
-
-
-  return true;
-
-}
-
-function validateForm() {
-  if (!validateName() || !validatePhone() || !validateEmail()) {
-
-    alert("Form not submitted");//Validation Message
-    return false;
-  }
-  else {
-    submitted=true;
-    return true;
-  }
-
-}
-function loadp(){
-  if(submitted){
-      window.location="https://greenisis.in"
-  }
-}
+window.addEventListener('scroll', ()=>{
+    navfade();
+    scrollappear('.left');
+    scrollappear('.right');
+    scrollappear('.bottom');
+})
