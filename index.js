@@ -5,11 +5,13 @@ window.addEventListener('load', () =>{
     const banner=document.querySelector('.banner');
     const navbar=document.querySelector('.nav');
     const products = document.querySelector('.products');
+    const cover = document.querySelector('.cover');
     loader.classList.add('loaderaft');
     preloader.classList.add('preloaderanime');
     banner.classList.add('banneraft');
     navbar.classList.add('navanime');
     products.style.backgroundImage = "linear-gradient(to bottom, #000000bd, #0000009f), url(Bg/prodbg.jpg)";
+    cover.style.backgroundImage = "linear-gradient(to bottom, #00000094,#00000079), url(Bg/mainbg.jpg)";
 })
 
 const navSlide=()=>{

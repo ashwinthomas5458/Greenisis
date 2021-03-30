@@ -119,7 +119,7 @@ header{
 .cover{
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(to bottom, #00000094,#00000079), url("Bg/mainbg.jpg");
+    background-color: #202020;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
